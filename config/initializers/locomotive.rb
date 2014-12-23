@@ -1,5 +1,11 @@
 Locomotive.configure do |config|
 
+  config.hosting = {
+    :target     => :heroku,
+    :api_key    => ENV['HEROKU_API_KEY'],
+    :app_name   => ENV['HEROKU_APP_NAME']
+  }
+
   # A single locomotiveCMS instance can serve one single site or many.
   # If you want to run many different websites, you will have to specify
   # your own domain name (ex: locomotivehosting.com).

@@ -20,7 +20,7 @@ production:
   sessions:
     default:
       # heroku
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
       # database: tothcms_production
       # hosts:
       #   - localhost:27017
