@@ -18,12 +18,12 @@ group :assets do
 end
 
 group :development do
-  gem 'locomotive-heroku', '~> 0.1.0', require: 'locomotive/heroku'
   # Use unicorn as the app server
   gem 'unicorn'
 end
 
 group :production do
+  gem 'locomotive-heroku', '~> 0.1.0', require: 'locomotive/heroku'
   gem 'thin'
 end
 

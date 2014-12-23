@@ -8,7 +8,11 @@ Dragonfly.app.configure do
 
   verify_urls true
 
-  secret 'f1c5ae49ab7056c169c73856c2a402197dd34a8d360c713680a5b9c1e4cbf73a'
+  if Rails.env.production?
+    secret ENV['DRAGONFLY_SECRET']
+  else
+    secret 'f1c5ae49ab7056c169c73856c2a402197dd34a8d360c713680a5b9c1e4cbf73a'
+  end
 
   url_format '/images/dynamic/:job/:basename.:ext'
 

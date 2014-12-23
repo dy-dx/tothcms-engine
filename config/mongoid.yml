@@ -19,10 +19,10 @@ test:
 production:
   sessions:
     default:
-      database: tothcms_production
       # heroku
-      # uri: <%= ENV['MONGOHQ_URL'] %>
-      hosts:
-        - localhost:27017
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      # database: tothcms_production
+      # hosts:
+      #   - localhost:27017
   options:
     identity_map_enabled: true
